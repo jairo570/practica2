@@ -1,9 +1,8 @@
-@ greet.s - a little asm greeter.
-@ programa corto que obtiene la entrada del teclado y luego lo imprime de nuevo en la pantalla.
+
 
 
 .section	.bss
-.comm buffer, 48	     @ reserve 48 byte buffer
+.comm buffer, 48	     
 
 .section	.data
 msg:
@@ -17,7 +16,7 @@ msg2Len = . - msg2
 .globl	_start
 _start:
 
-mov r0, $1		    @ print program's opening message	
+mov r0, $1		
 ldr r1, =msg
 ldr r2, =msgLen
 mov r7, $4
